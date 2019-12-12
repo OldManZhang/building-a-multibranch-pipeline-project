@@ -31,7 +31,7 @@ pipeline {
         }
         stage('Deploy') {
             when{
-	       brannch 'Production'
+	       branch 'Production'
 	    }
 	    steps {
             	echo "Deploy"
