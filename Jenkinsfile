@@ -20,5 +20,23 @@ pipeline {
 	    }
 
         }
+        stage('Delivery') {
+	    when {
+	       branch 'development'
+	    }
+            steps {
+            	echo "Delivery"
+	    }
+
+        }
+        stage('Deploy') {
+            when{
+	       brannch 'Production'
+	    }
+	    steps {
+            	echo "Deploy"
+	    }
+
+        }
     }
 }
